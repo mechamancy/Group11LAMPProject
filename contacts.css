@@ -1,0 +1,429 @@
+/* body formatting */
+body {
+    background-color: #ffffff00;
+    background-image: url('../images/background2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* content from leinecker */
+.content {
+    padding: 1px 16px;
+    height: 1000px;
+    margin-top: 25px;
+    margin-left: 270px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.loggedInDiv {
+    font-family: 'Ubuntu';
+    font-weight: bolder;
+    font-size: 2vw;
+    align-self: center;
+    text-align: center;
+}
+
+.accessUIDiv {
+    margin: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    align-self: center;
+}
+
+#logo-text {
+    padding: 5px 0px 15px 0px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+    color: #f05a28;
+}
+
+.column {
+    display: inline-block;
+    padding: 10px 10px;
+    vertical-align: middle;
+}
+
+.column button {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tables {
+    align-self: center;
+}
+
+.addContacts {
+    align-self: center;
+}
+
+/* add contacts table formatting */
+#addMe {
+    font-family: 'Ubuntu';
+    display: none;
+    border-radius: 17px;
+    position: relative;
+    background: rgba(216, 248, 233, .80);
+    max-width: 350px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#addMe input {
+    border-radius: 17px;
+    font-family: 'Ubuntu';
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+#addMe>input:valid {
+    border: 2px solid #009345;
+    ;
+}
+
+#addMe>input:invalid {
+    border: 2px solid red;
+}
+
+#addMe>input:invalid:required {
+    background-image: white;
+}
+
+#addMe button {
+    border-radius: 17px;
+    font-family: 'Ubuntu';
+    outline: 0;
+    background: #444e49;
+    color: rgba(216, 248, 233, .80);
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#contacts td input {
+    border-radius: 17px;
+    font-family: 'Ubuntu';
+    outline: 0;
+    background: #fbde99;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* button formatting */
+.btn {
+    color: rgba(216, 248, 233, .80);
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 2.3vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3em 1.2em;
+    margin: 0.6em 0.3em 0.3em 0;
+    float: right;
+}
+
+.btn:hover {
+    color: #444e49;
+}
+
+/* search bar formatting */
+.search-container {
+    background: #fff;
+    font-family: 'Ubuntu';
+    height: 30px;
+    width: 400px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+        -4px -4px 6px 0 rgba(116, 125, 136, .2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover>.search-input {
+    width: 400px;
+}
+
+.search-container .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.search-container .search-btn .fas {
+    color: #444e49;
+}
+
+.search-container:hover {
+    animation: linear 3;
+}
+
+span {
+    color: rgb(164, 0, 0);
+    font-family: 'Ubuntu';
+}
+
+p {
+    color: rgb(164, 0, 0);
+    font-family: 'Ubuntu';
+}
+
+/* table formatting */
+#contactsTable {
+    display: block;
+    height: 500px;
+}
+
+
+table {
+    width:100%;
+    table-layout: fixed;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.tbl-content {
+    height: 300px;
+    overflow-x: auto;
+    margin-top: 0px;
+    border: 1px solid rgba(216, 248, 233, .80);
+}
+
+#contacts td,
+#contacts th {
+    border: 1px solid rgba(216, 248, 233, .80);
+}
+
+#contacts tr:hover {
+    background-color: #478fbb;
+}
+
+#contacts th {
+    padding: 20px 15px;
+    text-align: left;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444e49;
+    background-color: rgba(216, 248, 233, .80);
+    text-transform: uppercase;
+}
+
+#contacts td {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Ubuntu';
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 15px;
+    font-weight: bold;
+    color: #444e49;
+    background-color: rgb(255, 255, 255);
+}
+#contacts td span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 100%;
+    color: #444e49;
+}
+
+/* for custom scrollbar for webkit browser*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/*side navigation menu*/
+.sidenav img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    position: relative;
+}
+
+.sidenav {
+    width: 264px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    top: 0px;
+    overflow: auto;
+    /*disables horizontal scroll*/
+    position: fixed;
+    /*scroll bar stays in place when user is scrolling*/
+    background: rgba(216, 248, 233, .80);
+}
+
+/*Side Navigation Links*/
+.sidenav a {
+    padding: 10px 0px 15px 0px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+    color: #ffffff;
+}
+
+.buttons {
+    padding: 10px 0px 15px 0px;
+    display: block;
+}
+
+/*buttons that are on the sidebar*/
+.sidebuttons {
+    padding: 10px 0px 15px 0px;
+    display: inline-block;
+}
+
+.sidebuttons:hover {
+    color: #444e49;
+}
+
+.buttons:hover {
+    color: #444e49;
+}
+
+.sidenav a:hover {
+    color: #444e49;
+}
+
+.font {
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 80px;
+}
+
+/* make sidebar a topbar for mobile view*/
+@media screen and (max-width: 700px) {
+    body {
+        background-image: url('../images/background2.jpg');
+    }
+
+    .sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /*hides scroll bar*/
+        position: sticky;
+
+    }
+
+    .sidebuttons {
+        position: relative;
+        font-size: 4vw;
+        top: 5px;
+    }
+
+    .sidenav a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 4vw;
+        top: 5px;
+        position: relative;
+    }
+
+    .sidenav img {
+        width: 12vw;
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+
+    .buttons {
+        margin-left: 100px;
+    }
+}
+
+/*displays the bar vertically*/
+@media screen and (max-width: 400px) {
+    .sidenav a {
+        text-align: center;
+        float: none;
+    }
+
+    .sidenav img {
+        width: 40%;
+    }
+}
