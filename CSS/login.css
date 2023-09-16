@@ -1,0 +1,206 @@
+/* login form */
+.form {
+    border-radius: 17px;
+    position: relative;
+    background: rgba(216, 248, 233, .80);
+    max-width: 350px;
+    margin: 0 auto 100px;
+    top: 0px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+    height: 360px;
+    transition: .6s;
+}
+
+/* logo formatting */
+#logo {
+    width: 10%;
+    height: 10%;
+    max-width: 200px;
+}
+
+#logo-text {
+    color: #FFFFFF;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw; /* Adjust the font size as needed */
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    padding:0.1em 1em;
+    margin:0.3em 0.3em 0.3em 0;
+}
+
+.input-field {
+    border-radius: 17px;
+    font-family: 'Ubuntu';
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    position: relative;
+}
+
+.submit-btn {
+    border-radius: 17px;
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    outline: 0;
+    background: #00579a;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.input-form {
+    transition: .4s;
+    position: absolute;
+}
+
+.input-field:valid {
+    border: 2px solid #009345;
+}
+
+.input-field:invalid {
+    border: 2px solid red;
+}
+
+.input-field:invalid:required {
+    background-image: white;
+}
+
+/* username and password criteria message */
+#explanation,
+#explanationUser {
+    display: none;
+    color: #000;
+    position: relative;
+    bottom: 1px;
+    text-align: center;
+    font-family: 'Ubuntu';
+}
+
+#explanation>p {
+    position: relative;
+    bottom: 10px;
+}
+
+/* error messaging formatting */
+#loginResult {
+    position: relative;
+    bottom: 175px;
+    color: rgb(203, 55, 21);
+    font-family: 'Ubuntu';
+}
+
+#signupResult {
+    position: relative;
+    bottom: 350px;
+    color: rgb(203, 55, 21);
+    font-family: 'Ubuntu';
+}
+
+/* Add text and a green check when the requirements are right */
+.valid {
+    color: #000000;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔️";
+}
+
+/* Add red text and a red X for the requirements that are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "❌";
+}
+/* bar surrounding login-signup buttons */
+.button-box {
+    width: 270px;
+    margin: auto;
+    position: relative;
+    border-radius: 30px;
+    top: -25px;
+    box-shadow: 0 0 25px 0 rgba(137, 114, 97, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* login and signup buttons */
+.toggle-btn {
+    padding: 10px 42px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: #FFFFFF;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* slider at top of form */
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    background: #00579a;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+#login {
+    position: relative;
+}
+
+#loginButton,
+#loginName,
+#loginPassword {
+    position: relative;
+    bottom: -50px;
+}
+
+#signup {
+    position: relative;
+    left: -400px;
+    top: -172px;
+}
+
+.submit-btn:hover {
+    background: #444e49;
+}
+
+/* body formatting */
+body {
+    background-color: #444e49;
+    background-image: url('../images/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    top: -100px;
+    margin: 10;
+    overflow: hidden;
+}
