@@ -1,8 +1,8 @@
 /* login form */
 .form {
-    border-radius: 17px;
+    border-radius: 20px;
     position: relative;
-    background: rgba(216, 248, 233, .80);
+    background: rgba(177, 188, 247, 0.3);
     max-width: 350px;
     margin: 0 auto 100px;
     top: 0px;
@@ -107,8 +107,8 @@
 
 #signupResult {
     position: relative;
-    bottom: 350px;
-    color: rgb(203, 55, 21);
+    bottom: -10px;
+    color: #009345;
     font-family: 'Ubuntu';
 }
 
@@ -141,6 +141,7 @@
     border-radius: 30px;
     top: -25px;
     box-shadow: 0 0 25px 0 rgba(137, 114, 97, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background: rgba(97, 100, 121, 0.9);
 }
 
 /* login and signup buttons */
@@ -154,9 +155,11 @@
     color: #FFFFFF;
     font-family: 'Ubuntu';
     font-style: normal;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
-    text-align: center;
+    /* text-align: center;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: black; */
 }
 
 /* slider at top of form */
