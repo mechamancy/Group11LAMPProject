@@ -16,22 +16,23 @@
 
 /* logo formatting */
 #logo {
-    width: 10%;
-    height: 10%;
-    max-width: 200px;
+    max-width: 15vw;
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 #logo-text {
-    color: #FFFFFF;
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.5vw; /* Adjust the font size as needed */
     border: none;
-    border-radius: 7px;
-    text-decoration: none;
-    padding:0.1em 1em;
-    margin:0.3em 0.3em 0.3em 0;
+    margin: 0em 0em 0em 0em;
+    margin-left: 2.1vh;
+    color: #e5e5e5;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 2vw;
+    font-family: 'Cairo', sans-serif;
 }
 
 .input-field {
@@ -48,12 +49,18 @@
     position: relative;
 }
 
+/* container to hold login/signup buttons */
+.btn {
+    margin: auto;
+    position: relative;
+}
+
 .submit-btn {
     border-radius: 17px;
     font-family: 'Ubuntu';
     text-transform: uppercase;
     outline: 0;
-    background: #00579a;
+    background: #1077c578;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -100,7 +107,7 @@
 /* error messaging formatting */
 #loginResult {
     position: relative;
-    bottom: 175px;
+    top: 70px;
     color: rgb(203, 55, 21);
     font-family: 'Ubuntu';
 }
@@ -112,7 +119,7 @@
     font-family: 'Ubuntu';
 }
 
-/* Add text and a green check when the requirements are right */
+/* Add text when the requirements are right */
 .valid {
     color: #000000;
 }
@@ -123,32 +130,16 @@
     content: "✔️";
 }
 
-/* Add red text and a red X for the requirements that are wrong */
+/* Add red text for the requirements that are wrong */
 .invalid {
     color: red;
 }
 
-.invalid:before {
-    position: relative;
-    left: -35px;
-    content: "❌";
-}
-/* bar surrounding login-signup buttons */
-.button-box {
-    width: 270px;
-    margin: auto;
-    position: relative;
-    border-radius: 30px;
-    top: -25px;
-    box-shadow: 0 0 25px 0 rgba(137, 114, 97, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    background: rgba(97, 100, 121, 0.9);
-}
-
 /* login and signup buttons */
 .toggle-btn {
-    padding: 10px 42px;
+    padding: 9px 40px;
     cursor: pointer;
-    background: transparent;
+    background: #828384e3;
     border: 0;
     outline: none;
     position: relative;
@@ -157,25 +148,20 @@
     font-style: normal;
     font-size: 14px;
     text-transform: uppercase;
-    /* text-align: center;
-    -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: black; */
+    border: 1px solid #b2b9c1;
+    margin: auto;
+    position: relative;
+    border-radius: 20px;
+    bottom: 10px;
 }
 
-/* slider at top of form */
-#btn {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 140px;
-    height: 100%;
-    background: #00579a;
-    border-radius: 30px;
-    transition: .4s;
+.toggle-btn:hover{
+    background: #1077c5d4;
 }
 
 #login {
     position: relative;
+    display: block;
 }
 
 #loginButton,
@@ -187,12 +173,11 @@
 
 #signup {
     position: relative;
-    left: -400px;
-    top: -172px;
+    display: none;
 }
 
 .submit-btn:hover {
-    background: #444e49;
+    background: #0c699f;
 }
 
 /* body formatting */
