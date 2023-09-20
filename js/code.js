@@ -1,8 +1,7 @@
-const urlBase = 'http://146.190.51.13/LAMPAPI';
+const urlBase = 'http://yourspacecontactmanager.online/LAMPAPI';
 const extension = 'php';
 
 let userId = 0;
-let name = "";
 let firstName = "";
 let lastName = "";
 const ids = []
@@ -156,7 +155,7 @@ function readCookie()
 	}
 	else
 	{
-		document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
+		document.getElementById("userName").innerHTML = "Welcome back " + firstName + "!";
 	}
 }
 
@@ -183,19 +182,21 @@ function showTable() {
 
 function addContact() {
 
-    let name = document.getElementById("contactTextFirst").value;
+    let firstname = document.getElementById("contactTextFirst").value;
+    let lastname = document.getElementById("contactTextLast").value;
     let phonenumber = document.getElementById("contactTextNumber").value;
     let emailaddress = document.getElementById("contactTextEmail").value;
 
-    if (!validAddContact(name, phonenumber, emailaddress)) {
-        console.log("INVALID NAME, PHONE, OR EMAIL SUBMITTED");
+    if (!validAddContact(firstname, lastname, phonenumber, emailaddress)) {
+        console.log("INVALID FIRST NAME, LAST NAME, PHONE, OR EMAIL SUBMITTED");
         return;
     }
     let tmp = {
         userId: userId,
-        name: name,
-        phoneNumber: phonenumber,
-        emailAddress: emailaddress
+        firstName: firstname,
+        lastName: lastname,
+        phone: phonenumber,
+        email: emailaddress,
     };
 
 
@@ -225,7 +226,8 @@ function addContact() {
 
 function loadContacts() {
     let tmp = {
-        search: "",
+        firstName: "",
+        lastName: "",
         userId: userId
     };
 
@@ -248,14 +250,23 @@ function loadContacts() {
                 for (let i = 0; i < jsonObject.results.length; i++) {
                     ids[i] = jsonObject.results[i].ID
                     text += "<tr id='row" + i + "'>"
-                    text += "<td id='name" + i + "'><span>" + jsonObject.results[i].Name + "</span></td>";
-                    text += "<td id='email" + i + "'><span>" + jsonObject.results[i].EmailAddress + "</span></td>";
-                    text += "<td id='phone" + i + "'><span>" + jsonObject.results[i].PhoneNumber + "</span></td>";
+                    text += "<td id='first_Name" + i + "'><span>" + jsonObject.results[i].firstName + "</span></td>";
+                    text += "<td id='last_Name" + i + "'><span>" + jsonObject.results[i].lastName + "</span></td>";
+                    text += "<td id='email" + i + "'><span>" + jsonObject.results[i].email + "</span></td>";
+                    text += "<td id='phone" + i + "'><span>" + jsonObject.results[i].phone + "</span></td>";
+                    text += "<td id='DateCreated" + i + "'><span>" + jsonObject.results[i].dateCreated + "</span></td>";
                     text += "<td>" +
-                        "<button type='button' id='edit_button" + i + "' class='w3-button w3-circle w3-lime' onclick='edit_row(" + i + ")'>" + "<span class='glyphicon glyphicon-edit'></span>" + "</button>" +
-                        "<button type='button' id='save_button" + i + "' value='Save' class='w3-button w3-circle w3-lime' onclick='save_row(" + i + ")' style='display: none'>" + "<span class='glyphicon glyphicon-saved'></span>" + "</button>" +
-                        "<button type='button' onclick='delete_row(" + i + ")' class='w3-button w3-circle w3-amber'>" + "<span class='glyphicon glyphicon-trash'></span> " + "</button>" + "</td>";
-                    text += "<tr/>"
+                            "<button type='button' id='edit_button" + i + "' class='w3-button w3-circle w3-light-green' onclick='edit_row(" + i + ")'>" + 
+                            "<i class='fas fa-edit'></i>" + 
+                            "</button>" +
+                            "<button type='button' id='save_button" + i + "' value='Save' class='w3-button w3-circle w3-light-green' onclick='save_row(" + i + ")' style='display: none'>" + 
+                            "<i class='fas fa-save'></i>" + 
+                            "</button>" +
+                            "<button type='button' onclick='delete_row(" + i + ")' class='w3-button w3-circle w3-deep-orange'>" + 
+                            "<i class='fas fa-trash'></i>" + 
+                            "</button>" + 
+                            "</td>";
+                    text += "<tr/>";``
                 }
                 text += "</table>"
                 document.getElementById("tbody").innerHTML = text;
@@ -284,7 +295,7 @@ function edit_row(id) {
     firstNameI.innerHTML = "<input type='text' id='namef_text" + id + "' value='" + namef_data + "'>";
     lastNameI.innerHTML = "<input type='text' id='namel_text" + id + "' value='" + namel_data + "'>";
     email.innerHTML = "<input type='text' id='email_text" + id + "' value='" + email_data + "'>";
-    phone.innerHTML = "<input type='text' id='phone_text" + id + "' value='" + phone_data + "'>"
+    phone.innerHTML = "<input type='text' id='phone_text" + id + "' value='" + phone_data + "'>";
 }
 
 function save_row(no) {
@@ -292,7 +303,8 @@ function save_row(no) {
     var namel_val = document.getElementById("namel_text" + no).value;
     var email_val = document.getElementById("email_text" + no).value;
     var phone_val = document.getElementById("phone_text" + no).value;
-    var id_val = ids[no]
+    var id_val = ids[no];
+
 
     document.getElementById("first_Name" + no).innerHTML = namef_val;
     document.getElementById("last_Name" + no).innerHTML = namel_val;
@@ -309,7 +321,6 @@ function save_row(no) {
         newLastName: namel_val,
         id: id_val
     };
-
     let jsonPayload = JSON.stringify(tmp);
 
     let url = urlBase + '/UpdateContacts.' + extension;
@@ -399,23 +410,17 @@ function searchContacts() {
 function clickLogin() {
     var log = document.getElementById("login");
     var reg = document.getElementById("signup");
-    var but = document.getElementById("btn");
-
-    log.style.left = "-400px";
-    reg.style.left = "0px";
-    but.style.left = "130px";
+    
+    log.style.display = 'none';   // Hide the login form
+    reg.style.display = 'block';  // Display the signup form
 }
 
 function clickRegister() {
-
     var log = document.getElementById("login");
     var reg = document.getElementById("signup");
-    var but = document.getElementById("btn");
-
-    reg.style.left = "-400px";
-    log.style.left = "0px";
-    but.style.left = "0px";
-
+    
+    reg.style.display = 'none';   // Hide the signup form
+    log.style.display = 'block';  // Display the login form
 }
 
 function validLoginForm(logName, logPass) {
