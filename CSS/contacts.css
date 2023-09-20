@@ -1,17 +1,15 @@
 /* body formatting */
 body {
     background-color: #ffffff;
-    background-image: url('../images/background2.jpg');
+    background-image: url('../images/background3.jpeg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     overflow: hidden;
     padding-top: 100px; /* to accomodate for top navigation bar */
-
 }
 
-/* content from leinecker */
 .content {
     padding: 1px 16px;
     height: 1000px;
@@ -26,11 +24,11 @@ body {
 }
 
 .loggedInDiv {
-    font-family: 'Ubuntu';
+    font-family: 'Cairo', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: bolder;
     font-size: 2vw;
     align-self: center;
-    text-align: center;
     bottom: -40px;
     position: relative;
 }
@@ -45,10 +43,11 @@ body {
 #logo-text {
     text-align: left;
     text-decoration: none;
-    font-family: 'Ubuntu';
+    font-family: 'Cairo', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 28px;
     line-height: 44px;
     color: #f05a28;
     display: inline;
@@ -64,21 +63,19 @@ body {
 
 .column button {
     position: relative;
-    background: #ffffff;
-    border-radius: 50%;
+    background: rgba(57, 93, 157, 0.31);
+    border-radius: 450%;
     padding: 15px;
     margin: 10px;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 35px;
     font-size: 18px;
     display: flex;
     border: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 10px 10px rgb(0, 0, 0);
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .tables {
@@ -107,7 +104,7 @@ body {
     border-radius: 17px;
     font-family: 'Ubuntu';
     outline: 0;
-    background: #f2f2f2;
+    background: #ffffff;
     width: 100%;
     border: 0;
     margin: 0 0 15px;
@@ -131,18 +128,26 @@ body {
 }
 
 #addMe button {
-    border-radius: 17px;
-    font-family: 'Ubuntu';
+    border-radius: 20px;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     outline: 0;
-    background: #444e49;
+    background: rgba(27, 25, 51, 0.4);
     color: white(255, 255, 255, 0.8);
-    width: 100%;
+    width: 50%;
     border: 0;
     margin: 0 0 15px;
     padding: 10px;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 20px;
     cursor: pointer;
+    text-align: center;
+}
+
+#addMe button:hover {
+    background-color: rgba(188, 213, 238, 0.31); 
+    color: #f05a28;      
+    text-decoration: none;       
 }
 
 #contacts td input {
@@ -207,16 +212,12 @@ body {
     font-family: 'Ubuntu';
     font-weight: 500;
     font-size: 16px;
-    transition: 0.8s;
 }
 
 .search-container .search-btn .fas {
-    color: #444e49;
+    color: #000000;
 }
 
-.search-container:hover {
-    animation: linear 3;
-}
 
 span {
     color: rgb(164, 0, 0);
@@ -242,17 +243,16 @@ table {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-
+/* rgba(43, 72, 118, 0.8); , rgba(43, 72, 118, 0.5);*/
 .tbl-content {
     height: 300px;
     overflow-x: auto;
     margin-top: 0px;
-    border: 1px solid rgba(43, 72, 118, 0.8);
 }
 
 #contacts td,
 #contacts th {
-    border: 1px solid rgba(43, 72, 118, 0.5);
+    border: 1px solid rgba(43, 72, 118, 0.8);
 }
 
 #contacts tr:hover {
@@ -267,7 +267,7 @@ table {
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
-    background-color: rgba(43, 72, 118, .8);
+    background-color: rgba(43, 72, 118, 0.8);
     text-transform: uppercase;
 }
 
@@ -279,7 +279,7 @@ table {
     font-weight: 300;
     font-size: 15px;
     font-weight: bold;
-    color: #444e4913;
+    color: #082b63ea;
     background-color: rgb(255, 255, 255);
 }
 #contacts td span {
@@ -287,7 +287,7 @@ table {
     white-space: nowrap;
     overflow: hidden;
     font-size: 100%;
-    color: #444e49;
+    color: #082b63;
 }
 
 /* for custom scrollbar for webkit browser*/
@@ -320,7 +320,7 @@ table {
 .topnav img {
     display: inline;
     width: auto;   
-    max-height: 50px; 
+    max-height: 60px; 
     margin-left: 5px; 
 }
 
@@ -335,89 +335,69 @@ table {
     font-size: 25px;
     line-height: 44px;
     color: #ffffff;
-    margin: 0; /* Adding margin reset to ensure no default browser margins */
+    margin: 0; 
 }
 
 .topnav a:hover {
-    color: #444e49;
+    color: #f05a28;
     text-decoration: underline;
 }
-
-.font, .button-container-right {
+.topnav a{
     text-align: left;
-    font-family: 'Ubuntu';
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    font-family: 'Cairo', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: 25px;
+    font-weight: 400;
+    font-size: 23px;
     line-height: 44px;
     color: #ffffff;
     background: none;
     border: none;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 20px; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.font, .button-container-right {
+    text-align: left;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 44px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .sidebuttons:hover, .font:hover {
-    color: #444e49;
+    color: #f05a28;
     text-decoration: underline;
 }
 
-.button-container-left{ 
-    /* empty container */
+/* overiding w3 css for edit/delete buttons */
+.w3-button {
+
 }
 
-/* make sidebar a topbar for mobile view*/
-@media screen and (max-width: 700px) {
-    body {
-        background-image: url('../images/background2.jpg');
-    }
-
-    .sidenav {
-        width: 100%;
-        height: auto;
-        position: relative;
-        overflow: hidden;
-        /*hides scroll bar*/
-        position: sticky;
-
-    }
-
-    .sidebuttons {
-        position: relative;
-        font-size: 4vw;
-        top: 5px;
-    }
-
-    .sidenav a {
-        display: inline-block;
-        padding: 10px;
-        font-size: 4vw;
-        top: 5px;
-        position: relative;
-    }
-
-    .sidenav img {
-        width: 12vw;
-        float: left;
-    }
-
-    div.content {
-        margin-left: 0;
-    }
-
-    .buttons {
-        margin-left: 100px;
-    }
+.w3-button.w3-light-green {
+    color: #26358e!important;
+    background-color: rgb(147, 0, 0);
+    border: 1px solid #26358e;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-/*displays the bar vertically*/
-@media screen and (max-width: 400px) {
-    .sidenav a {
-        text-align: center;
-        float: none;
-    }
+.w3-button.w3-deep-orange {
+    color: #26358e!important;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #26358e;
+}
 
-    .sidenav img {
-        width: 40%;
-    }
+.w3-button i.fas {
+    color: white !important;
 }
