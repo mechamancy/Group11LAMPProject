@@ -17,17 +17,18 @@
 /* logo formatting */
 #logo {
     max-width: 15vw;
-    width: 150px;
+    width: 200px;
     height: auto;
-    margin-bottom: 10px;
     margin-left: 10px;
     margin-top: 10px;
 }
 
 #logo-text {
     border: none;
-    margin: 0em 0em 0em 0em;
-    margin-left: 2.1vh;
+    padding-left: 0.47em;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
     color: #e5e5e5;
     font-style: normal;
     font-weight: 200;
@@ -135,6 +136,12 @@
     color: red;
 }
 
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "❌";
+}
+
 /* login and signup buttons */
 .toggle-btn {
     padding: 9px 40px;
@@ -182,7 +189,6 @@
 
 /* body formatting */
 body {
-    background-color: #444e49;
     background-image: url('../images/background.jpg');
     background-position: center center;
     background-repeat: no-repeat;
